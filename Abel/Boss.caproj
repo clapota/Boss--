@@ -93,16 +93,17 @@
         <object-type global="1" name="Array" sid="492665813865847">
             <plugin id="Arr" />
         </object-type>
-        <object-type name="TiledBackground2" sid="762361617223882">
-            <plugin id="TiledBg" />
-            <texture />
-        </object-type>
-        <object-type name="salary" sid="980832859848908">
-            <plugin id="TiledBg" />
+        <object-type name="cooldown" sid="594255750325200">
+            <plugin id="Sprite" />
             <instance-variables>
-                <instance-variable name="salary" sid="348859907173547" type="number" />
+                <instance-variable name="time" sid="624525749732502" type="number" />
+                <instance-variable name="is_on" sid="355734670145582" type="boolean" />
             </instance-variables>
-            <texture original-source="C:\Users\Arnaud\Documents\progressBarV3.png" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="858729577945019" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Abel Vinuela-Hamoudi\Documents\GitHub\Boss--\Ozz\asset\cooldown.png" />
+                </animation>
+            </animation-folder>
         </object-type>
     </object-folder>
     <families />
@@ -113,6 +114,8 @@
         <event-sheet>Hold.xml</event-sheet>
         <event-sheet>Mash.xml</event-sheet>
         <event-sheet>Wiggle.xml</event-sheet>
+        <event-sheet>Event sheet 1.xml</event-sheet>
+        <event-sheet>main.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="2" />

@@ -3,7 +3,8 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Wiggle</name>
     <events>
-        <include>Mash</include>
+        <variable constant="0" name="Rand" sid="665899233947897" static="0" type="number">0</variable>
         <include>Hold</include>
+        <include>Mash</include>
     </events>
 </c2eventsheet>
