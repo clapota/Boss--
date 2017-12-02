@@ -93,6 +93,17 @@
         <object-type global="1" name="Array" sid="492665813865847">
             <plugin id="Arr" />
         </object-type>
+        <object-type name="TiledBackground2" sid="762361617223882">
+            <plugin id="TiledBg" />
+            <texture />
+        </object-type>
+        <object-type name="salary" sid="980832859848908">
+            <plugin id="TiledBg" />
+            <instance-variables>
+                <instance-variable name="salary" sid="348859907173547" type="number" />
+            </instance-variables>
+            <texture original-source="C:\Users\Arnaud\Documents\progressBarV3.png" />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>

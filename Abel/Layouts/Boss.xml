@@ -38,7 +38,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>0</x>
-                        <y>4</y>
+                        <y>0</y>
                         <z>0</z>
                         <width>1280</width>
                         <height>720</height>
@@ -114,6 +114,29 @@
                         <z>0</z>
                         <width>120</width>
                         <height>120</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="salary" uid="6">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                    </properties>
+                    <instance-variables>
+                        <salary>0</salary>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>33</x>
+                        <y>668</y>
+                        <z>0</z>
+                        <width>0</width>
+                        <height>13</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
