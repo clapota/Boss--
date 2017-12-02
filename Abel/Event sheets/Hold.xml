@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Hold</name>
+    <events>
+        <event-block sid="711912134461577">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="977291038612887" type="System" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="452296445012784" type="Sprite">
+                    <param id="0" name="Animation">&quot;BASIC&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="5" name="Set frame" sid="885833304900403" type="holdmash">
+                    <param id="0" name="Frame number">holdmash.mashframe</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="334884100397635">
+            <conditions>
+                <condition id="2" name="Key is down" sid="606042671200537" type="Keyboard">
+                    <param id="0" name="Key">65 (A)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-11" name="Add to" sid="712853342011501" type="holdmash">
+                    <param id="0" name="Instance variable">mashframe</param>
+                    <param id="1" name="Value">0.1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="416635997937329">
+            <conditions>
+                <condition id="3" name="Compare frame" sid="863548229053713" type="holdmash">
+                    <param id="0" name="Comparison">0</param>
+                    <param id="1" name="Number">9</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="189650524868640" type="holdmash">
+                    <param id="0" name="Frame number">0</param>
+                </action>
+                <action id="-10" name="Set value" sid="983230861778110" type="holdmash">
+                    <param id="0" name="Instance variable">mashframe</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-2" name="Set Y" sid="853388267528451" type="holdmash">
+                    <param id="0" name="Y">250</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
