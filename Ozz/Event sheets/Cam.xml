@@ -15,7 +15,7 @@
                         <condition id="2" name="Supports user media" sid="156528596117294" type="oCam" />
                     </conditions>
                     <actions>
-                        <action disabled="1" id="0" name="Request camera" sid="637175602341314" type="oCam">
+                        <action id="0" name="Request camera" sid="637175602341314" type="oCam">
                             <param id="0" name="Source">0</param>
                             <param id="1" name="Preferred width">0</param>
                             <param id="2" name="Preferred height">0</param>
