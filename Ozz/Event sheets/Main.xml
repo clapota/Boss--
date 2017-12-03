@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Main</name>
+    <events>
+        <include>Hold</include>
+        <include>Smash</include>
+        <include>Xp bar</include>
+        <include>Cam</include>
+        <event-block sid="907926803960108">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="804592631376391" type="Keyboard">
+                    <param id="0" name="Key">32 (Espace)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="342493082933801" type="oGenerator">
+                    <param id="0" name="Instance variable">tile_X</param>
+                    <param id="1" name="Value">int(random(0, 6))</param>
+                </action>
+                <action id="-10" name="Set value" sid="233990659051670" type="oGenerator">
+                    <param id="0" name="Instance variable">tile_Y</param>
+                    <param id="1" name="Value">int(random(0, 3))</param>
+                </action>
+                <action id="-1" name="Set X" sid="156497233735375" type="oGenerator">
+                    <param id="0" name="X">28 + oGenerator.tile_X * 166</param>
+                </action>
+                <action id="-2" name="Set Y" sid="827648902129594" type="oGenerator">
+                    <param id="0" name="Y">28 + oGenerator.tile_Y * 221</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="739557466001417" type="oGenerator">
+                    <param id="0" name="Object">oSmash</param>
+                    <param id="1" name="Layer">2</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

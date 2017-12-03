@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Xp bar</name>
+    <events>
+        <comment>level up</comment>
+        <event-block sid="879716556471676">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="576133301351189" type="System" />
+            </conditions>
+            <actions>
+                <action id="-5" name="Set width" sid="244167076508992" type="oXP_bar">
+                    <param id="0" name="Width">oXP_bar.salary % 1200</param>
+                </action>
+                <action id="5" name="Set frame" sid="453226190669104" type="oBadge">
+                    <param id="0" name="Frame number">oBadge.grade</param>
+                </action>
+                <action id="2" name="Stop" sid="581602758091953" type="oBadge" />
+            </actions>
+        </event-block>
+        <event-block sid="701857881538222">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="799704646470804" type="oXP_bar">
+                    <param id="0" name="Instance variable">salary</param>
+                    <param id="1" name="Comparison">5</param>
+                    <param id="2" name="Value">1200</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="356199267287579" type="oBadge">
+                    <param id="0" name="Instance variable">grade</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="449104592033502" type="oBadge">
+                    <param id="0" name="Instance variable">grade</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-10" name="Set value" sid="603971314904198" type="oXP_bar">
+                    <param id="0" name="Instance variable">salary</param>
+                    <param id="1" name="Value">1200</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="157409153092270">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="158506546626733" type="oXP_bar">
+                    <param id="0" name="Instance variable">salary</param>
+                    <param id="1" name="Comparison">5</param>
+                    <param id="2" name="Value">2400</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="202204518784347" type="oBadge">
+                    <param id="0" name="Instance variable">grade</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="123422811667608" type="oBadge">
+                    <param id="0" name="Instance variable">grade</param>
+                    <param id="1" name="Value">2</param>
+                </action>
+                <action id="-10" name="Set value" sid="351696392121188" type="oXP_bar">
+                    <param id="0" name="Instance variable">salary</param>
+                    <param id="1" name="Value">2400</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="743350651937194">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="216727116140220" type="oXP_bar">
+                    <param id="0" name="Instance variable">salary</param>
+                    <param id="1" name="Comparison">5</param>
+                    <param id="2" name="Value">3600</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="414242469540138" type="oBadge">
+                    <param id="0" name="Instance variable">grade</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="482402253226816" type="oBadge">
+                    <param id="0" name="Instance variable">grade</param>
+                    <param id="1" name="Value">3</param>
+                </action>
+                <action id="-10" name="Set value" sid="339712441814736" type="oXP_bar">
+                    <param id="0" name="Instance variable">salary</param>
+                    <param id="1" name="Value">3600</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="965272471158839">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="405632794749155" type="oXP_bar">
+                    <param id="0" name="Instance variable">salary</param>
+                    <param id="1" name="Comparison">5</param>
+                    <param id="2" name="Value">4800</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="978893695200499" type="oBadge">
+                    <param id="0" name="Instance variable">grade</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">3</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="265974336802251" type="oBadge">
+                    <param id="0" name="Instance variable">grade</param>
+                    <param id="1" name="Value">4</param>
+                </action>
+                <action id="-10" name="Set value" sid="999639031874908" type="oXP_bar">
+                    <param id="0" name="Instance variable">salary</param>
+                    <param id="1" name="Value">4800</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
