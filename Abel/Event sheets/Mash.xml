@@ -3,35 +3,28 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Mash</name>
     <events>
-        <variable constant="0" name="gagne" sid="518367458230368" static="0" type="number">0</variable>
         <event-block sid="435461422618682">
             <conditions>
                 <condition id="-1" name="Every tick" sid="547578365776578" type="System" />
             </conditions>
             <actions>
-                <action id="4" name="Set animation" sid="906413990833244" type="Sprite">
-                    <param id="0" name="Animation">&quot;BASIC&quot;</param>
-                    <param id="1" name="From">1</param>
+                <action id="-5" name="Set width" sid="175155186145670" type="salary">
+                    <param id="0" name="Width">salary.salary</param>
                 </action>
-                <action id="5" name="Set frame" sid="335571411677153" type="holdmash">
-                    <param id="0" name="Frame number">holdmash.mashframe</param>
-                </action>
-                <action id="-7" name="Set size" sid="953055649567373" type="cooldown">
-                    <param id="0" name="Width">cooldown.time</param>
-                    <param id="1" name="Height">58</param>
+                <action id="5" name="Set frame" sid="392141342475506" type="Sprite">
+                    <param id="0" name="Frame number">Sprite.grade</param>
                 </action>
             </actions>
             <sub-events>
-                <event-block sid="373759167078726">
+                <event-block sid="982103027440690">
                     <conditions>
-                        <condition id="-8" name="Is boolean instance variable set" sid="279114917901932" type="cooldown">
-                            <param id="0" name="Instance variable">is_on</param>
+                        <condition id="2" name="Is playing" sid="641207153820812" type="holdmash">
+                            <param id="0" name="Animation">&quot;MASH&quot;</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-11" name="Add to" sid="874225213536577" type="cooldown">
-                            <param id="0" name="Instance variable">time</param>
-                            <param id="1" name="Value">0.37</param>
+                        <action id="5" name="Set frame" sid="335571411677153" type="holdmash">
+                            <param id="0" name="Frame number">holdmash.mashframe * (15 / holdmash.NB_MASH)</param>
                         </action>
                     </actions>
                 </event-block>
@@ -39,8 +32,8 @@
         </event-block>
         <event-block sid="209945884324443">
             <conditions>
-                <condition id="0" name="On key pressed" sid="724456553836933" type="Keyboard">
-                    <param id="0" name="Key">66 (B)</param>
+                <condition id="4" name="On key code pressed" sid="724456553836933" type="Keyboard">
+                    <param id="0" name="Keycode">holdmash.Key_code + 65</param>
                 </condition>
             </conditions>
             <actions>
@@ -48,122 +41,93 @@
                     <param id="0" name="Instance variable">mashframe</param>
                     <param id="1" name="Value">1</param>
                 </action>
-                <action id="-16" name="Wait" sid="152112263112926" type="System">
-                    <param id="0" name="Seconds">3</param>
-                </action>
             </actions>
-            <sub-events>
-                <event-block sid="618263191523037">
-                    <conditions>
-                        <condition id="-14" name="Compare variable" sid="110998466395491" type="System">
-                            <param id="0" name="Variable">gagne</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">0</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="5" name="Set frame" sid="148610390958478" type="holdmash">
-                            <param id="0" name="Frame number">0</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="238115284527725" type="holdmash">
-                            <param id="0" name="Instance variable">mashframe</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="583773185869106">
-                    <conditions>
-                        <condition id="-14" name="Compare variable" sid="317040399097572" type="System">
-                            <param id="0" name="Variable">gagne</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">1</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="320215325202804" type="System">
-                            <param id="0" name="Variable">gagne</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
         </event-block>
+        <comment>MASHING IS DONE</comment>
         <event-block sid="690141949453456">
             <conditions>
-                <condition id="3" name="Compare frame" sid="569046878940518" type="holdmash">
-                    <param id="0" name="Comparison">0</param>
-                    <param id="1" name="Number">9</param>
+                <condition id="-7" name="Compare instance variable" sid="569046878940518" type="holdmash">
+                    <param id="0" name="Instance variable">mashframe</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">holdmash.NB_MASH</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="5" name="Set frame" sid="175755660857476" type="holdmash">
-                    <param id="0" name="Frame number">0</param>
+                <action id="-11" name="Add to" sid="319387997687942" type="salary">
+                    <param id="0" name="Instance variable">salary</param>
+                    <param id="1" name="Value">50</param>
                 </action>
-                <action id="-10" name="Set value" sid="749855633685926" type="holdmash">
+                <action id="-10" name="Set value" sid="175755660857476" type="holdmash">
                     <param id="0" name="Instance variable">mashframe</param>
                     <param id="1" name="Value">0</param>
                 </action>
-                <action id="-9" name="Set value" sid="321288982733747" type="System">
-                    <param id="0" name="Variable">gagne</param>
-                    <param id="1" name="Value">1</param>
+                <action id="4" name="Set animation" sid="749855633685926" type="holdmash">
+                    <param id="0" name="Animation">&quot;DONE&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="963480952496878" type="SpriteFont">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="0" name="Play" sid="677148166815798" type="Audio">
+                    <param id="0" name="Audio file">Super-Mario-Bros-Coin-Sound-Effect</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
                 </action>
             </actions>
         </event-block>
-        <event-block sid="436484847408216">
+        <event-block sid="918190242037706">
             <conditions>
-                <condition id="-7" name="Compare instance variable" sid="940141285823014" type="cooldown">
-                    <param id="0" name="Instance variable">time</param>
-                    <param id="1" name="Comparison">4</param>
-                    <param id="2" name="Value">110</param>
+                <condition id="4" name="On finished" sid="221638043991346" type="holdmash">
+                    <param id="0" name="Animation">&quot;DONE&quot;</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="-13" name="Set boolean" sid="441237233081610" type="cooldown">
-                    <param id="0" name="Instance variable">is_on</param>
-                    <param id="1" name="Value">0</param>
-                </action>
-                <action id="0" name="Spawn another object" sid="981802114340169" type="Sprite">
-                    <param id="0" name="Object">Sprite</param>
-                    <param id="1" name="Layer">0</param>
-                    <param id="2" name="Image point">0</param>
-                </action>
-                <action id="-10" name="Set value" sid="155080864118469" type="cooldown">
-                    <param id="0" name="Instance variable">time</param>
-                    <param id="1" name="Value">0</param>
-                </action>
-                <action id="-9" name="Destroy" sid="103738900493857" type="holdmash" />
-                <action id="-9" name="Destroy" sid="969802375630828" type="cooldown" />
-            </actions>
-        </event-block>
-        <event-block sid="818338100951757">
-            <conditions>
-                <condition id="-18" name="On created" sid="179197581526992" type="holdmash" />
-            </conditions>
-            <actions>
-                <action id="-13" name="Set boolean" sid="153832978765055" type="cooldown">
-                    <param id="0" name="Instance variable">is_on</param>
-                    <param id="1" name="Value">1</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="563565100429406">
-            <conditions>
-                <condition id="1" name="On any key pressed" sid="111927902340400" type="Keyboard" />
-            </conditions>
-            <actions>
-                <action id="0" name="Spawn another object" sid="271845652456291" type="holdmash">
+                <action id="-9" name="Destroy" sid="857618613895321" type="holdmash" />
+                <action id="0" name="Spawn another object" sid="602145198078373" type="holdmash">
                     <param id="0" name="Object">holdmash</param>
-                    <param id="1" name="Layer">0</param>
+                    <param id="1" name="Layer">1</param>
                     <param id="2" name="Image point">0</param>
                 </action>
-                <action id="0" name="Spawn another object" sid="528139050086920" type="cooldown">
-                    <param id="0" name="Object">cooldown</param>
-                    <param id="1" name="Layer">0</param>
-                    <param id="2" name="Image point">0</param>
+            </actions>
+        </event-block>
+        <event-block sid="348181608687080">
+            <conditions>
+                <condition id="-18" name="On created" sid="305766503432495" type="holdmash" />
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="528132271896932" type="holdmash">
+                    <param id="0" name="Instance variable">Key_code</param>
+                    <param id="1" name="Value">int(random(0, 25))</param>
                 </action>
-                <action id="-9" name="Set value" sid="782274476086780" type="System">
-                    <param id="0" name="Variable">Rand</param>
+                <action id="-10" name="Set value" sid="882899204575193" type="holdmash">
+                    <param id="0" name="Instance variable">NB_MASH</param>
+                    <param id="1" name="Value">int(random(5, 15))</param>
+                </action>
+                <action id="-15" name="Set visible" sid="186879936223093" type="SpriteFont">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="0" name="Set text" sid="754875634366041" type="SpriteFont">
+                    <param id="0" name="Text">mid(SpriteFont.dico_ascii, holdmash.Key_code, 1)</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>level up</comment>
+        <event-block sid="568420313674590">
+            <conditions>
+                <condition id="-5" name="Compare width" sid="248170112193589" type="salary">
+                    <param id="0" name="Comparison">5</param>
+                    <param id="1" name="Width">1200</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="161811529290912" type="salary">
+                    <param id="0" name="Instance variable">salary</param>
                     <param id="1" name="Value">0</param>
+                </action>
+                <action id="-11" name="Add to" sid="906640626782630" type="Sprite">
+                    <param id="0" name="Instance variable">grade</param>
+                    <param id="1" name="Value">1</param>
                 </action>
             </actions>
         </event-block>

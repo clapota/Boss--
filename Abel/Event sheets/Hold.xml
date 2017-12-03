@@ -8,10 +8,6 @@
                 <condition id="-1" name="Every tick" sid="977291038612887" type="System" />
             </conditions>
             <actions>
-                <action id="4" name="Set animation" sid="452296445012784" type="Sprite">
-                    <param id="0" name="Animation">&quot;BASIC&quot;</param>
-                    <param id="1" name="From">1</param>
-                </action>
                 <action id="5" name="Set frame" sid="885833304900403" type="holdmash">
                     <param id="0" name="Frame number">holdmash.mashframe</param>
                 </action>
