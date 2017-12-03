@@ -11,9 +11,11 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     </configurations>
     <open-tabs>
         <layout order="0">Boss</layout>
-        <event-sheet active="1" order="1">Main</event-sheet>
-        <event-sheet order="2">Smash</event-sheet>
-        <event-sheet order="3">Xp bar</event-sheet>
+        <event-sheet active="1" order="1">Mash</event-sheet>
+        <event-sheet order="2">Hold</event-sheet>
+        <event-sheet order="3">Wiggle</event-sheet>
+        <event-sheet order="4">tempo</event-sheet>
+        <event-sheet order="5">main</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -30,8 +32,10 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="sound-folder/" />
         <folder expanded="1" path="music-folder/" />
         <folder expanded="0" path="file-folder/Icons/" />
-        <folder expanded="1" path="animation-folder/oSmash/" />
-        <folder expanded="1" path="animation-folder/oBadge/" />
-        <folder expanded="1" path="animation-folder/oGenerator/" />
+        <folder expanded="1" path="animation-folder/hold/" />
+        <folder expanded="1" path="animation-folder/player_card/" />
+        <folder expanded="1" path="animation-folder/the_boss/" />
+        <folder expanded="1" path="animation-folder/wiggle/" />
+        <folder expanded="1" path="animation-folder/mash/" />
     </folders-expanded>
 </c2uistate>

@@ -9,8 +9,8 @@
         <include>Cam</include>
         <event-block sid="907926803960108">
             <conditions>
-                <condition id="0" name="On key pressed" sid="804592631376391" type="Keyboard">
-                    <param id="0" name="Key">32 (Espace)</param>
+                <condition id="-6" name="Every X seconds" sid="804592631376391" type="System">
+                    <param id="0" name="Interval (seconds)">random(3 - oBadge.grade, 7 - oBadge.grade)</param>
                 </condition>
             </conditions>
             <actions>

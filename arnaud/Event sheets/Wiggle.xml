@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Wiggle</name>
+    <events>
+        <event-block sid="178726353422968">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="238590106603938" type="System" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="277803036226549">
+                    <conditions>
+                        <condition id="2" name="Is playing" sid="270260097564948" type="wiggle">
+                            <param id="0" name="Animation">&quot;increase&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="796038375961546" type="wiggle">
+                            <param id="0" name="Frame number">wiggle.fram * (11 / wiggle.nb_pressed)</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="959274731224994">
+            <conditions>
+                <condition id="-18" name="On created" sid="397007359380429" type="wiggle" />
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="136041233781878" type="wiggle">
+                    <param id="0" name="Instance variable">key_code1</param>
+                    <param id="1" name="Value">int(random(0, 25))</param>
+                </action>
+                <action id="-10" name="Set value" sid="774373810157634" type="wiggle">
+                    <param id="0" name="Instance variable">key_code2</param>
+                    <param id="1" name="Value">int(random(0, 25))</param>
+                </action>
+                <action id="-10" name="Set value" sid="334606302879811" type="wiggle">
+                    <param id="0" name="Instance variable">nb_pressed</param>
+                    <param id="1" name="Value">int(random(4, 11))</param>
+                </action>
+                <action id="-15" name="Set visible" sid="215922132617544" type="SpriteFont">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="0" name="Set text" sid="143788401704780" type="SpriteFont">
+                    <param id="0" name="Text">mid(SpriteFont.dico_ascii, wiggle.Key_code1, 1)</param>
+                </action>
+                <action id="0" name="Set text" sid="583534207787415" type="SpriteFont">
+                    <param id="0" name="Text">left(SpriteFont.dico_ascii, wiggle.Key_code2)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="545592043739109">
+            <conditions>
+                <condition id="4" name="On key code pressed" sid="797166725705077" type="Keyboard">
+                    <param id="0" name="Keycode">wiggle.key_code1 + 65</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="848277967036535">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="654400618191232" type="wiggle">
+                            <param id="0" name="Instance variable">fram2_mod_2</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Add to" sid="988869313403257" type="wiggle">
+                            <param id="0" name="Instance variable">fram</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="102301593823872" type="wiggle">
+                            <param id="0" name="Instance variable">fram2_mod_2</param>
+                            <param id="1" name="Value">wiggle.fram % 2</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="633903120161027">
+            <conditions>
+                <condition id="4" name="On key code pressed" sid="237446519828296" type="Keyboard">
+                    <param id="0" name="Keycode">wiggle.key_code2 + 65</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="163716595502252">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="422623658138148" type="wiggle">
+                            <param id="0" name="Instance variable">fram2_mod_2</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Add to" sid="324317395532478" type="wiggle">
+                            <param id="0" name="Instance variable">fram</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="188576101610539" type="wiggle">
+                            <param id="0" name="Instance variable">fram2_mod_2</param>
+                            <param id="1" name="Value">wiggle.fram % 2</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment>wiggle done</comment>
+        <event-block sid="233156871368736">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="695863787619620" type="wiggle">
+                    <param id="0" name="Instance variable">fram</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">wiggle.nb_pressed</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-11" name="Add to" sid="160105753848324" type="salary">
+                    <param id="0" name="Instance variable">salary</param>
+                    <param id="1" name="Value">50</param>
+                </action>
+                <action id="-10" name="Set value" sid="490830263207252" type="wiggle">
+                    <param id="0" name="Instance variable">fram</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="550611157425074" type="SpriteFont">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="4" name="Set animation" sid="269982169368062" type="wiggle">
+                    <param id="0" name="Animation">&quot;destroy&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="878422704100234">
+            <conditions>
+                <condition id="4" name="On finished" sid="782972537026383" type="wiggle">
+                    <param id="0" name="Animation">&quot;destroy&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="807768169040079" type="wiggle" />
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
