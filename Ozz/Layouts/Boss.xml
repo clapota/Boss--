@@ -87,11 +87,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1284</x>
-                        <y>4</y>
+                        <x>1342.366821289</x>
+                        <y>126.940460205</y>
                         <z>0</z>
-                        <width>100</width>
-                        <height>100</height>
+                        <width>108.088493347</width>
+                        <height>78.971702576</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
@@ -152,6 +152,54 @@
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="cash" uid="9">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1025.732543945</x>
+                        <y>525.970336914</y>
+                        <z>0</z>
+                        <width>219</width>
+                        <height>111</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="oHold" uid="10">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Hold_count>0</Hold_count>
+                        <Key_code>0</Key_code>
+                        <NB_HOLD>1</NB_HOLD>
+                        <ID>0</ID>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1400</x>
+                        <y>382</y>
+                        <z>0</z>
+                        <width>300</width>
+                        <height>300</height>
+                        <depth>0</depth>
+                        <hotspotX>0.456666678</hotspotX>
+                        <hotspotY>0.413333327</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

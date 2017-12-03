@@ -2,5 +2,173 @@
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Hold</name>
-    <events />
+    <events>
+        <event-block sid="217593607413828">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="852904752467907" type="System" />
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="953351746428563" type="oHold">
+                    <param id="0" name="Instance variable">ID</param>
+                    <param id="1" name="Value">Keyboard.LastKeyCode - 65</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="560091539699966">
+                    <conditions>
+                        <condition id="2" name="Is playing" sid="378512241093731" type="oHold">
+                            <param id="0" name="Animation">&quot;HOLD&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="936069501130614" type="oHold">
+                            <param id="0" name="Frame number">oHold.Hold_count * (15/oHold.NB_HOLD)</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment>HOLD</comment>
+        <event-block sid="604568938591738">
+            <conditions>
+                <condition id="1" name="On any key pressed" sid="531293013577567" type="Keyboard" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="517865151367201">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="560374162232009" type="oHold">
+                            <param id="0" name="Instance variable">Key_code</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">Keyboard.LastKeyCode - 65</param>
+                        </condition>
+                        <condition id="-16" name="Is on layer" sid="436806119610630" type="oHold">
+                            <param id="0" name="Layer">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Add to" sid="299674051767239" type="oHold">
+                            <param id="0" name="Instance variable">Hold_count</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="446695806694375">
+            <conditions>
+                <condition id="-18" name="On created" sid="600301202226773" type="oHold" />
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="815954332211403" type="oHold">
+                    <param id="0" name="Instance variable">Key_code</param>
+                    <param id="1" name="Value">int(random(0,25))</param>
+                </action>
+                <action id="-10" name="Set value" sid="533701037828607" type="oHold">
+                    <param id="0" name="Instance variable">NB_HOLD</param>
+                    <param id="1" name="Value">int(random(6, 15))</param>
+                </action>
+                <action id="0" name="Set text" sid="220566666083440" type="oLetter">
+                    <param id="0" name="Text">mid(oLetter.dico_ascii, oHold.Key_code, 1)</param>
+                </action>
+                <action id="-4" name="Set position to another object" sid="359506370656663" type="oLetter">
+                    <param id="0" name="Object">oHold</param>
+                    <param id="1" name="Image point (optional)">oHold.ImagePointCount</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>HOLD COMPLETE</comment>
+        <event-block sid="927969545869669">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="881216580552759" type="oHold">
+                    <param id="0" name="Instance variable">Hold_count</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">oHold.NB_HOLD</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="203234173235748" type="oHold">
+                    <param id="0" name="Instance variable">Hold_count</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="4" name="Set animation" sid="444725161025016" type="oHold">
+                    <param id="0" name="Animation">&quot;DONE&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="939226757918386">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="352065589503556" type="oBadge">
+                            <param id="0" name="Instance variable">grade</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Add to" sid="763846439934437" type="oXP_bar">
+                            <param id="0" name="Instance variable">salary</param>
+                            <param id="1" name="Value">50</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="377671173998110">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="734651083839793" type="oBadge">
+                            <param id="0" name="Instance variable">grade</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Add to" sid="264133472797278" type="oXP_bar">
+                            <param id="0" name="Instance variable">salary</param>
+                            <param id="1" name="Value">40</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="688966965670091">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="755397403699804" type="oBadge">
+                            <param id="0" name="Instance variable">grade</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Add to" sid="256928884412561" type="oXP_bar">
+                            <param id="0" name="Instance variable">salary</param>
+                            <param id="1" name="Value">30</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="392139761414967">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="785979496883675" type="oBadge">
+                            <param id="0" name="Instance variable">grade</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Add to" sid="919411158659665" type="oXP_bar">
+                            <param id="0" name="Instance variable">salary</param>
+                            <param id="1" name="Value">30</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment>DESTROY ANIMATION</comment>
+        <event-block sid="851601351351676">
+            <conditions>
+                <condition id="4" name="On finished" sid="645919737588047" type="oHold">
+                    <param id="0" name="Animation">&quot;DONE&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="975495336064049" type="oHold" />
+            </actions>
+        </event-block>
+    </events>
 </c2eventsheet>

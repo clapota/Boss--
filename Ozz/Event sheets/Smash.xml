@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Smash</name>
+    <events>
+        <event-block sid="897803750742675">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="816959370837230" type="System" />
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="679603667942815" type="oSmash">
+                    <param id="0" name="Instance variable">ID</param>
+                    <param id="1" name="Value">Keyboard.LastKeyCode - 65</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="743827693356224">
+                    <conditions>
+                        <condition id="2" name="Is playing" sid="543122307837156" type="oSmash">
+                            <param id="0" name="Animation">&quot;MASH&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="932249431767548" type="oSmash">
+                            <param id="0" name="Frame number">oSmash.Smash_count * (20 / oSmash.NB_SMASH)</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment>SMASHING</comment>
+        <event-block sid="123401924392023">
+            <conditions>
+                <condition id="1" name="On any key pressed" sid="607776733402038" type="Keyboard" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="479518218385650">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="150993166525141" type="oSmash">
+                            <param id="0" name="Instance variable">Key_code</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">Keyboard.LastKeyCode - 65</param>
+                        </condition>
+                        <condition id="-16" name="Is on layer" sid="808796553981457" type="oSmash">
+                            <param id="0" name="Layer">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Add to" sid="774937606807748" type="oSmash">
+                            <param id="0" name="Instance variable">Smash_count</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment>SPAWN SMASH</comment>
+        <event-block sid="636206163598973">
+            <conditions>
+                <condition id="-18" name="On created" sid="206767786065629" type="oSmash" />
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="577555927098533" type="oSmash">
+                    <param id="0" name="Instance variable">Key_code</param>
+                    <param id="1" name="Value">int(random(0, 25))</param>
+                </action>
+                <action id="-10" name="Set value" sid="935001786739071" type="oSmash">
+                    <param id="0" name="Instance variable">NB_SMASH</param>
+                    <param id="1" name="Value">int(random(5, 20))</param>
+                </action>
+                <action id="0" name="Set text" sid="757017282411052" type="oLetter">
+                    <param id="0" name="Text">mid(oLetter.dico_ascii, oSmash.Key_code, 1)</param>
+                </action>
+                <action id="-4" name="Set position to another object" sid="208530751224873" type="oLetter">
+                    <param id="0" name="Object">oSmash</param>
+                    <param id="1" name="Image point (optional)">oSmash.ImagePointCount</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>SMASHING COMPLETE</comment>
+        <event-block sid="940393995168333">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="519473456822183" type="oSmash">
+                    <param id="0" name="Instance variable">Smash_count</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">oSmash.NB_SMASH</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="337019259488590" type="oSmash">
+                    <param id="0" name="Instance variable">Smash_count</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="4" name="Set animation" sid="246986017955698" type="oSmash">
+                    <param id="0" name="Animation">&quot;DONE&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="0" name="Play" sid="184925365282529" type="Audio">
+                    <param id="0" name="Audio file">Super-Mario-Bros-Coin-Sound-Effect</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">-35</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="688136771970815">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="532875077218689" type="oBadge">
+                            <param id="0" name="Instance variable">grade</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Add to" sid="599925528913341" type="oXP_bar">
+                            <param id="0" name="Instance variable">salary</param>
+                            <param id="1" name="Value">50</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="957924434201322">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="617052164820206" type="oBadge">
+                            <param id="0" name="Instance variable">grade</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Add to" sid="629812273041553" type="oXP_bar">
+                            <param id="0" name="Instance variable">salary</param>
+                            <param id="1" name="Value">40</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="479838356670737">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="851098760638617" type="oBadge">
+                            <param id="0" name="Instance variable">grade</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Add to" sid="927906908985616" type="oXP_bar">
+                            <param id="0" name="Instance variable">salary</param>
+                            <param id="1" name="Value">30</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="693705530260994">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="730678336074659" type="oBadge">
+                            <param id="0" name="Instance variable">grade</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Add to" sid="982132994379230" type="oXP_bar">
+                            <param id="0" name="Instance variable">salary</param>
+                            <param id="1" name="Value">30</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment>DESTROY ANIMATION</comment>
+        <event-block sid="439960387469919">
+            <conditions>
+                <condition id="4" name="On finished" sid="699430603502873" type="oSmash">
+                    <param id="0" name="Animation">&quot;DONE&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="440374480670934" type="oSmash" />
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

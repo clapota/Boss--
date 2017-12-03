@@ -7,10 +7,13 @@
         <include>Smash</include>
         <include>Xp bar</include>
         <include>Cam</include>
-        <event-block sid="907926803960108">
+        <event-block any="1" sid="907926803960108">
             <conditions>
                 <condition id="-6" name="Every X seconds" sid="804592631376391" type="System">
                     <param id="0" name="Interval (seconds)">random(3 - oBadge.grade, 7 - oBadge.grade)</param>
+                </condition>
+                <condition id="0" name="On key pressed" sid="385579180425494" type="Keyboard">
+                    <param id="0" name="Key">32 (Espace)</param>
                 </condition>
             </conditions>
             <actions>
@@ -26,7 +29,7 @@
                     <param id="0" name="X">28 + oGenerator.tile_X * 166</param>
                 </action>
                 <action id="-2" name="Set Y" sid="827648902129594" type="oGenerator">
-                    <param id="0" name="Y">28 + oGenerator.tile_Y * 221</param>
+                    <param id="0" name="Y">116+ oGenerator.tile_Y * 221</param>
                 </action>
                 <action id="0" name="Spawn another object" sid="739557466001417" type="oGenerator">
                     <param id="0" name="Object">oSmash</param>
