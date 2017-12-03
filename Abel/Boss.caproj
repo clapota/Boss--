@@ -10,12 +10,12 @@
     <unique-id>1cyfdoi47nhso</unique-id>
     <saved-with-version>24400</saved-with-version>
     <used-plugins>
-        <plugin author="Scirra" id="Arr" version="1">Array</plugin>
         <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Spritefont2" version="1">Sprite font</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+        <plugin author="Scirra" id="UserMedia" version="1">User Media</plugin>
     </used-plugins>
     <used-behaviors />
     <used-effects />
@@ -45,7 +45,7 @@
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
     <object-folder>
-        <object-type name="TiledBackground" sid="359706111452342">
+        <object-type name="Background" sid="359706111452342">
             <plugin id="TiledBg" />
             <instance-variables>
                 <instance-variable name="mash_progress" sid="180120954369724" type="number" />
@@ -55,17 +55,22 @@
         <object-type name="Keyboard" sid="847321981821045">
             <plugin id="Keyboard" />
         </object-type>
-        <object-type name="holdmash" sid="775889145469783">
+        <object-type name="oSmash" sid="775889145469783">
             <plugin id="Sprite" />
             <instance-variables>
-                <instance-variable name="mashframe" sid="933391093097836" type="number" />
+                <instance-variable name="Smash_count" sid="933391093097836" type="number" />
                 <instance-variable name="Key_code" sid="863311289446946" type="number" />
-                <instance-variable name="dico_ascii" sid="947186749792610" type="string" />
-                <instance-variable name="NB_MASH" sid="309463065981743" type="number" />
+                <instance-variable name="NB_SMASH" sid="309463065981743" type="number" />
+                <instance-variable name="ID" sid="214697828446021" type="number" />
             </instance-variables>
+            <container>
+                <type>oSmash</type>
+                <type>oLetter</type>
+            </container>
             <animation-folder>
                 <animation framecount="16" loop="0" name="MASH" pingpong="0" repeatcount="1" repeatto="0" sid="244668404864981" speed="5">
                     <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Ozz\Documents\GitHub\Boss--\Ozz\asset\Sprite-0001.png">
+                        <image-point name="Letter" x="0.5" y="0.5" />
                         <collision-poly>
                             <point x="0.142857" y="0.142857" />
                             <point x="0.5" y="0" />
@@ -78,6 +83,7 @@
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0" hotspotY="0">
+                        <image-point name="Letter" x="0.5" y="0.5" />
                         <collision-poly>
                             <point x="0.142857" y="0.142857" />
                             <point x="0.5" y="0" />
@@ -90,6 +96,7 @@
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0" hotspotY="0">
+                        <image-point name="Letter" x="0.5" y="0.5" />
                         <collision-poly>
                             <point x="0.142857" y="0.142857" />
                             <point x="0.5" y="0" />
@@ -102,6 +109,7 @@
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0" hotspotY="0">
+                        <image-point name="Letter" x="0.5" y="0.5" />
                         <collision-poly>
                             <point x="0.142857" y="0.142857" />
                             <point x="0.5" y="0" />
@@ -114,6 +122,7 @@
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0" hotspotY="0">
+                        <image-point name="Letter" x="0.5" y="0.5" />
                         <collision-poly>
                             <point x="0.142857" y="0.142857" />
                             <point x="0.5" y="0" />
@@ -126,6 +135,7 @@
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0" hotspotY="0">
+                        <image-point name="Letter" x="0.5" y="0.5" />
                         <collision-poly>
                             <point x="0.142857" y="0.142857" />
                             <point x="0.5" y="0" />
@@ -138,6 +148,7 @@
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0" hotspotY="0">
+                        <image-point name="Letter" x="0.5" y="0.5" />
                         <collision-poly>
                             <point x="0.142857" y="0.142857" />
                             <point x="0.5" y="0" />
@@ -150,6 +161,7 @@
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0" hotspotY="0">
+                        <image-point name="Letter" x="0.5" y="0.5" />
                         <collision-poly>
                             <point x="0.142857" y="0.142857" />
                             <point x="0.5" y="0" />
@@ -162,6 +174,7 @@
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0" hotspotY="0">
+                        <image-point name="Letter" x="0.5" y="0.5" />
                         <collision-poly>
                             <point x="0.142857" y="0.142857" />
                             <point x="0.5" y="0" />
@@ -174,6 +187,7 @@
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0" hotspotY="0">
+                        <image-point name="Letter" x="0.5" y="0.5" />
                         <collision-poly>
                             <point x="0.142857" y="0.142857" />
                             <point x="0.5" y="0" />
@@ -186,6 +200,7 @@
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0" hotspotY="0">
+                        <image-point name="Letter" x="0.5" y="0.5" />
                         <collision-poly>
                             <point x="0.142857" y="0.142857" />
                             <point x="0.5" y="0" />
@@ -198,6 +213,7 @@
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0" hotspotY="0">
+                        <image-point name="Letter" x="0.5" y="0.5" />
                         <collision-poly>
                             <point x="0.142857" y="0.142857" />
                             <point x="0.5" y="0" />
@@ -210,6 +226,7 @@
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0" hotspotY="0">
+                        <image-point name="Letter" x="0.5" y="0.5" />
                         <collision-poly>
                             <point x="0.142857" y="0.142857" />
                             <point x="0.5" y="0" />
@@ -222,6 +239,7 @@
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0" hotspotY="0">
+                        <image-point name="Letter" x="0.5" y="0.5" />
                         <collision-poly>
                             <point x="0.142857" y="0.142857" />
                             <point x="0.5" y="0" />
@@ -234,6 +252,7 @@
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0" hotspotY="0">
+                        <image-point name="Letter" x="0.5" y="0.5" />
                         <collision-poly>
                             <point x="0.142857" y="0.142857" />
                             <point x="0.5" y="0" />
@@ -246,6 +265,7 @@
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0" hotspotY="0">
+                        <image-point name="Letter" x="0.5" y="0.5" />
                         <collision-poly>
                             <point x="0.142857" y="0.142857" />
                             <point x="0.5" y="0" />
@@ -340,24 +360,26 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type global="1" name="Array" sid="492665813865847">
-            <plugin id="Arr" />
-        </object-type>
-        <object-type name="salary" sid="980832859848908">
+        <object-type name="oXP_bar" sid="980832859848908">
             <plugin id="TiledBg" />
             <instance-variables>
                 <instance-variable name="salary" sid="348859907173547" type="number" />
             </instance-variables>
             <texture original-source="C:\Users\Arnaud\Documents\progressBarV3.png" />
         </object-type>
-        <object-type name="SpriteFont" sid="480560498131417">
+        <object-type name="oLetter" sid="480560498131417">
             <plugin id="Spritefont2" />
             <instance-variables>
                 <instance-variable name="dico_ascii" sid="999960793633003" type="string" />
+                <instance-variable name="ID" sid="314923641876835" type="number" />
             </instance-variables>
+            <container>
+                <type>oSmash</type>
+                <type>oLetter</type>
+            </container>
             <texture />
         </object-type>
-        <object-type name="Sprite" sid="925752341260126">
+        <object-type name="oBadge" sid="925752341260126">
             <plugin id="Sprite" />
             <instance-variables>
                 <instance-variable name="grade" sid="765525454804398" type="number" />
@@ -374,6 +396,21 @@
         <object-type name="Audio" sid="317095204814100">
             <plugin id="Audio" />
         </object-type>
+        <object-type name="oCam" sid="739944354839361">
+            <plugin id="UserMedia" />
+        </object-type>
+        <object-type name="oGenerator" sid="769457404579318">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="tile_X" sid="363570525934037" type="number" />
+                <instance-variable name="tile_Y" sid="578077794752127" type="number" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="956134651086492" speed="5">
+                    <frame duration="1" hotspotX="0.666667" hotspotY="0.666667" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
@@ -381,9 +418,11 @@
     </layout-folder>
     <event-folder>
         <event-sheet>Hold.xml</event-sheet>
-        <event-sheet>Mash.xml</event-sheet>
+        <event-sheet>Main.xml</event-sheet>
         <event-sheet>Wiggle.xml</event-sheet>
-        <event-sheet>cam.xml</event-sheet>
+        <event-sheet>Cam.xml</event-sheet>
+        <event-sheet>Xp bar.xml</event-sheet>
+        <event-sheet>Smash.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="2" />
