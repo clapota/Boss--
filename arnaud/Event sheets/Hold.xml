@@ -8,8 +8,8 @@
                 <condition id="-1" name="Every tick" sid="977291038612887" type="System" />
             </conditions>
             <actions>
-                <action id="5" name="Set frame" sid="885833304900403" type="holdmash">
-                    <param id="0" name="Frame number">holdmash.mashframe</param>
+                <action id="5" name="Set frame" sid="885833304900403" type="hold">
+                    <param id="0" name="Frame number">hold.holdframe</param>
                 </action>
             </actions>
         </event-block>
@@ -20,28 +20,28 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="-11" name="Add to" sid="712853342011501" type="holdmash">
-                    <param id="0" name="Instance variable">mashframe</param>
+                <action id="-11" name="Add to" sid="712853342011501" type="hold">
+                    <param id="0" name="Instance variable">holdframe</param>
                     <param id="1" name="Value">0.1</param>
                 </action>
             </actions>
         </event-block>
         <event-block sid="416635997937329">
             <conditions>
-                <condition id="3" name="Compare frame" sid="863548229053713" type="holdmash">
+                <condition id="3" name="Compare frame" sid="863548229053713" type="hold">
                     <param id="0" name="Comparison">0</param>
                     <param id="1" name="Number">9</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="5" name="Set frame" sid="189650524868640" type="holdmash">
+                <action id="5" name="Set frame" sid="189650524868640" type="hold">
                     <param id="0" name="Frame number">0</param>
                 </action>
-                <action id="-10" name="Set value" sid="983230861778110" type="holdmash">
-                    <param id="0" name="Instance variable">mashframe</param>
+                <action id="-10" name="Set value" sid="983230861778110" type="hold">
+                    <param id="0" name="Instance variable">holdframe</param>
                     <param id="1" name="Value">0</param>
                 </action>
-                <action id="-2" name="Set Y" sid="853388267528451" type="holdmash">
+                <action id="-2" name="Set Y" sid="853388267528451" type="hold">
                     <param id="0" name="Y">250</param>
                 </action>
             </actions>

@@ -91,7 +91,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="holdmash" uid="5">
+                <instance type="hold" uid="5">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -99,16 +99,16 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <mashframe>0</mashframe>
-                        <Key_code>0</Key_code>
-                        <dico_ascii>&quot;ABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;</dico_ascii>
-                        <NB_MASH>0</NB_MASH>
+                        <holdframe>0</holdframe>
+                        <Key_code_hold>0</Key_code_hold>
+                        <dico_ascii_hold>&quot;ABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;</dico_ascii_hold>
+                        <NB_HOLD>0</NB_HOLD>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>32.106185913</x>
-                        <y>33.092674255</y>
+                        <x>694.200622559</x>
+                        <y>36.047538757</y>
                         <z>0</z>
                         <width>100</width>
                         <height>100</height>
@@ -244,7 +244,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="wigglehold" uid="10">
+                <instance type="wiggle" uid="10">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -270,6 +270,34 @@
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="mash" uid="11">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <mashframe>0</mashframe>
+                        <key_code>0</key_code>
+                        <dico_assci>&quot;ABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;</dico_assci>
+                        <NB_MASH>0</NB_MASH>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>83.15977478</x>
+                        <y>153.662948608</y>
+                        <z>0</z>
+                        <width>109.068344116</width>
+                        <height>78.394416809</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.506329119</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

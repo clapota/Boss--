@@ -55,13 +55,13 @@
         <object-type name="Keyboard" sid="847321981821045">
             <plugin id="Keyboard" />
         </object-type>
-        <object-type name="holdmash" sid="775889145469783">
+        <object-type name="hold" sid="775889145469783">
             <plugin id="Sprite" />
             <instance-variables>
-                <instance-variable name="mashframe" sid="933391093097836" type="number" />
-                <instance-variable name="Key_code" sid="863311289446946" type="number" />
-                <instance-variable name="dico_ascii" sid="947186749792610" type="string" />
-                <instance-variable name="NB_MASH" sid="309463065981743" type="number" />
+                <instance-variable name="holdframe" sid="933391093097836" type="number" />
+                <instance-variable name="Key_code_hold" sid="863311289446946" type="number" />
+                <instance-variable name="dico_ascii_hold" sid="947186749792610" type="string" />
+                <instance-variable name="NB_HOLD" sid="309463065981743" type="number" />
             </instance-variables>
             <animation-folder>
                 <animation framecount="16" loop="0" name="MASH" pingpong="0" repeatcount="1" repeatto="0" sid="244668404864981" speed="5">
@@ -412,15 +412,7 @@
             <plugin id="TiledBg" />
             <texture original-source="C:\Users\Arnaud\Documents\GitHub\Boss--\arnaud\sprite\fiche_de_paye.png" />
         </object-type>
-        <object-type name="Sprite" sid="534911905761245">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="421499474929621" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="wigglehold" sid="137824336601663">
+        <object-type name="wiggle" sid="137824336601663">
             <plugin id="Sprite" />
             <instance-variables>
                 <instance-variable name="fram" sid="404351760169820" type="number" />
@@ -605,6 +597,50 @@
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Arnaud\Documents\Boss-- backup\arnaud\sprite\wiggledestroy2.png" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Arnaud\Documents\Boss-- backup\arnaud\sprite\wiggledestroy3.png" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Arnaud\Documents\Boss-- backup\arnaud\sprite\wiggledestroy4.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="mash" sid="222307179554155">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="mashframe" sid="366356328677036" type="number" />
+                <instance-variable name="key_code" sid="461228561692118" type="number" />
+                <instance-variable name="dico_assci" sid="377419946782518" type="string" />
+                <instance-variable name="NB_MASH" sid="295564876733584" type="number" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="21" loop="0" name="Mash" pingpong="0" repeatcount="1" repeatto="0" sid="225340302896389" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.506329" original-source="C:\Users\Arnaud\Documents\Boss-- backup\arnaud\sprite\mash_spriteV3.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.506329" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.506329" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.506329" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.506329" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.506329" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.506329" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.506329" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.506329" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.506329" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.506329" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.506329" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.506329" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.506329" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.506329" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.506329" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.506329" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.506329" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.506329" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.506329" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.506329" />
+                </animation>
+                <animation framecount="8" loop="0" name="DONE" pingpong="0" repeatcount="1" repeatto="0" sid="963481081737785" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.506329" original-source="C:\Users\Arnaud\Documents\Boss-- backup\arnaud\sprite\mash_spriteV3.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.506329" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.506329" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.506329" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.506329" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.506329" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.506329" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.506329" />
                 </animation>
             </animation-folder>
         </object-type>
