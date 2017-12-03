@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Mash</name>
+    <events>
+        <event-block sid="435461422618682">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="547578365776578" type="System" />
+            </conditions>
+            <actions>
+                <action id="-5" name="Set width" sid="175155186145670" type="salary">
+                    <param id="0" name="Width">salary.salary</param>
+                </action>
+                <action id="5" name="Set frame" sid="392141342475506" type="player_card">
+                    <param id="0" name="Frame number">player_card.grade</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="982103027440690">
+                    <conditions>
+                        <condition id="2" name="Is playing" sid="641207153820812" type="holdmash">
+                            <param id="0" name="Animation">&quot;MASH&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="335571411677153" type="holdmash">
+                            <param id="0" name="Frame number">holdmash.mashframe * (15 / holdmash.NB_MASH)</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="209945884324443">
+            <conditions>
+                <condition id="4" name="On key code pressed" sid="724456553836933" type="Keyboard">
+                    <param id="0" name="Keycode">holdmash.Key_code + 65</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-11" name="Add to" sid="290829041339026" type="holdmash">
+                    <param id="0" name="Instance variable">mashframe</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>MASHING IS DONE</comment>
+        <event-block sid="690141949453456">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="569046878940518" type="holdmash">
+                    <param id="0" name="Instance variable">mashframe</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">holdmash.NB_MASH</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-11" name="Add to" sid="319387997687942" type="salary">
+                    <param id="0" name="Instance variable">salary</param>
+                    <param id="1" name="Value">50</param>
+                </action>
+                <action id="0" name="Play" sid="677148166815798" type="Audio">
+                    <param id="0" name="Audio file">Super-Mario-Bros-Coin-Sound-Effect</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">-40</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="-10" name="Set value" sid="175755660857476" type="holdmash">
+                    <param id="0" name="Instance variable">mashframe</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="4" name="Set animation" sid="749855633685926" type="holdmash">
+                    <param id="0" name="Animation">&quot;DONE&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="963480952496878" type="SpriteFont">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="918190242037706">
+            <conditions>
+                <condition id="4" name="On finished" sid="221638043991346" type="holdmash">
+                    <param id="0" name="Animation">&quot;DONE&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="857618613895321" type="holdmash" />
+                <action id="0" name="Spawn another object" sid="602145198078373" type="holdmash">
+                    <param id="0" name="Object">holdmash</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="348181608687080">
+            <conditions>
+                <condition id="-18" name="On created" sid="305766503432495" type="holdmash" />
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="528132271896932" type="holdmash">
+                    <param id="0" name="Instance variable">Key_code</param>
+                    <param id="1" name="Value">int(random(0, 25))</param>
+                </action>
+                <action id="-10" name="Set value" sid="882899204575193" type="holdmash">
+                    <param id="0" name="Instance variable">NB_MASH</param>
+                    <param id="1" name="Value">int(random(5, 15))</param>
+                </action>
+                <action id="-15" name="Set visible" sid="186879936223093" type="SpriteFont">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="0" name="Set text" sid="754875634366041" type="SpriteFont">
+                    <param id="0" name="Text">mid(SpriteFont.dico_ascii, holdmash.Key_code, 1)</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>level up</comment>
+        <event-block sid="568420313674590">
+            <conditions>
+                <condition id="-5" name="Compare width" sid="248170112193589" type="salary">
+                    <param id="0" name="Comparison">5</param>
+                    <param id="1" name="Width">1200</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="161811529290912" type="salary">
+                    <param id="0" name="Instance variable">salary</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-11" name="Add to" sid="906640626782630" type="player_card">
+                    <param id="0" name="Instance variable">grade</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Play" sid="378563071190685" type="Audio">
+                    <param id="0" name="Audio file">Final-Fantasy-XI-Level-Up-Sound-High-Quality</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">-35</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

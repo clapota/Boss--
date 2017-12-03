@@ -1,0 +1,656 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>Boss</name>
+    <description></description>
+    <version>0.0.1</version>
+    <author></author>
+    <author-email></author-email>
+    <author-website>http://</author-website>
+    <app-id>com.mycompany.myapp</app-id>
+    <unique-id>1cyfdoi47nhso</unique-id>
+    <saved-with-version>24400</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="Arr" version="1">Array</plugin>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Spritefont2" version="1">Sprite font</plugin>
+        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+    </used-plugins>
+    <used-behaviors />
+    <used-effects />
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>1280</width>
+        <height>720</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Downscaling">Medium quality</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Loader style">Construct 2 splash</prop>
+        <prop name="Orientations">Any</prop>
+        <prop name="Pause on unfocus">No</prop>
+        <prop name="Physics engine">Box2D asm.js</prop>
+        <prop name="Preload sounds">Yes</prop>
+        <prop name="Preview browser">(default)</prop>
+        <prop name="Sampling">Linear</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-type name="Background" sid="359706111452342">
+            <plugin id="TiledBg" />
+            <instance-variables>
+                <instance-variable name="mash_progress" sid="180120954369724" type="number" />
+            </instance-variables>
+            <texture original-source="C:\Users\Ozz\Documents\GitHub\Boss--\Ozz\asset\Background.png" />
+        </object-type>
+        <object-type name="Keyboard" sid="847321981821045">
+            <plugin id="Keyboard" />
+        </object-type>
+        <object-type name="holdmash" sid="775889145469783">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="mashframe" sid="933391093097836" type="number" />
+                <instance-variable name="Key_code" sid="863311289446946" type="number" />
+                <instance-variable name="dico_ascii" sid="947186749792610" type="string" />
+                <instance-variable name="NB_MASH" sid="309463065981743" type="number" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="16" loop="0" name="MASH" pingpong="0" repeatcount="1" repeatto="0" sid="244668404864981" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Ozz\Documents\GitHub\Boss--\Ozz\asset\Sprite-0001.png">
+                        <collision-poly>
+                            <point x="0.142857" y="0.142857" />
+                            <point x="0.5" y="0" />
+                            <point x="0.857143" y="0.142857" />
+                            <point x="1" y="0.5" />
+                            <point x="0.857143" y="0.857143" />
+                            <point x="0.5" y="1" />
+                            <point x="0.142857" y="0.857143" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0" hotspotY="0">
+                        <collision-poly>
+                            <point x="0.142857" y="0.142857" />
+                            <point x="0.5" y="0" />
+                            <point x="0.857143" y="0.142857" />
+                            <point x="1" y="0.5" />
+                            <point x="0.857143" y="0.857143" />
+                            <point x="0.5" y="1" />
+                            <point x="0.142857" y="0.857143" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0" hotspotY="0">
+                        <collision-poly>
+                            <point x="0.142857" y="0.142857" />
+                            <point x="0.5" y="0" />
+                            <point x="0.857143" y="0.142857" />
+                            <point x="1" y="0.5" />
+                            <point x="0.857143" y="0.857143" />
+                            <point x="0.5" y="1" />
+                            <point x="0.142857" y="0.857143" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0" hotspotY="0">
+                        <collision-poly>
+                            <point x="0.142857" y="0.142857" />
+                            <point x="0.5" y="0" />
+                            <point x="0.857143" y="0.142857" />
+                            <point x="1" y="0.5" />
+                            <point x="0.857143" y="0.857143" />
+                            <point x="0.5" y="1" />
+                            <point x="0.142857" y="0.857143" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0" hotspotY="0">
+                        <collision-poly>
+                            <point x="0.142857" y="0.142857" />
+                            <point x="0.5" y="0" />
+                            <point x="0.857143" y="0.142857" />
+                            <point x="1" y="0.5" />
+                            <point x="0.857143" y="0.857143" />
+                            <point x="0.5" y="1" />
+                            <point x="0.142857" y="0.857143" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0" hotspotY="0">
+                        <collision-poly>
+                            <point x="0.142857" y="0.142857" />
+                            <point x="0.5" y="0" />
+                            <point x="0.857143" y="0.142857" />
+                            <point x="1" y="0.5" />
+                            <point x="0.857143" y="0.857143" />
+                            <point x="0.5" y="1" />
+                            <point x="0.142857" y="0.857143" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0" hotspotY="0">
+                        <collision-poly>
+                            <point x="0.142857" y="0.142857" />
+                            <point x="0.5" y="0" />
+                            <point x="0.857143" y="0.142857" />
+                            <point x="1" y="0.5" />
+                            <point x="0.857143" y="0.857143" />
+                            <point x="0.5" y="1" />
+                            <point x="0.142857" y="0.857143" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0" hotspotY="0">
+                        <collision-poly>
+                            <point x="0.142857" y="0.142857" />
+                            <point x="0.5" y="0" />
+                            <point x="0.857143" y="0.142857" />
+                            <point x="1" y="0.5" />
+                            <point x="0.857143" y="0.857143" />
+                            <point x="0.5" y="1" />
+                            <point x="0.142857" y="0.857143" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0" hotspotY="0">
+                        <collision-poly>
+                            <point x="0.142857" y="0.142857" />
+                            <point x="0.5" y="0" />
+                            <point x="0.857143" y="0.142857" />
+                            <point x="1" y="0.5" />
+                            <point x="0.857143" y="0.857143" />
+                            <point x="0.5" y="1" />
+                            <point x="0.142857" y="0.857143" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0" hotspotY="0">
+                        <collision-poly>
+                            <point x="0.142857" y="0.142857" />
+                            <point x="0.5" y="0" />
+                            <point x="0.857143" y="0.142857" />
+                            <point x="1" y="0.5" />
+                            <point x="0.857143" y="0.857143" />
+                            <point x="0.5" y="1" />
+                            <point x="0.142857" y="0.857143" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0" hotspotY="0">
+                        <collision-poly>
+                            <point x="0.142857" y="0.142857" />
+                            <point x="0.5" y="0" />
+                            <point x="0.857143" y="0.142857" />
+                            <point x="1" y="0.5" />
+                            <point x="0.857143" y="0.857143" />
+                            <point x="0.5" y="1" />
+                            <point x="0.142857" y="0.857143" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0" hotspotY="0">
+                        <collision-poly>
+                            <point x="0.142857" y="0.142857" />
+                            <point x="0.5" y="0" />
+                            <point x="0.857143" y="0.142857" />
+                            <point x="1" y="0.5" />
+                            <point x="0.857143" y="0.857143" />
+                            <point x="0.5" y="1" />
+                            <point x="0.142857" y="0.857143" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0" hotspotY="0">
+                        <collision-poly>
+                            <point x="0.142857" y="0.142857" />
+                            <point x="0.5" y="0" />
+                            <point x="0.857143" y="0.142857" />
+                            <point x="1" y="0.5" />
+                            <point x="0.857143" y="0.857143" />
+                            <point x="0.5" y="1" />
+                            <point x="0.142857" y="0.857143" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0" hotspotY="0">
+                        <collision-poly>
+                            <point x="0.142857" y="0.142857" />
+                            <point x="0.5" y="0" />
+                            <point x="0.857143" y="0.142857" />
+                            <point x="1" y="0.5" />
+                            <point x="0.857143" y="0.857143" />
+                            <point x="0.5" y="1" />
+                            <point x="0.142857" y="0.857143" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0" hotspotY="0">
+                        <collision-poly>
+                            <point x="0.142857" y="0.142857" />
+                            <point x="0.5" y="0" />
+                            <point x="0.857143" y="0.142857" />
+                            <point x="1" y="0.5" />
+                            <point x="0.857143" y="0.857143" />
+                            <point x="0.5" y="1" />
+                            <point x="0.142857" y="0.857143" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0" hotspotY="0">
+                        <collision-poly>
+                            <point x="0.142857" y="0.142857" />
+                            <point x="0.5" y="0" />
+                            <point x="0.857143" y="0.142857" />
+                            <point x="1" y="0.5" />
+                            <point x="0.857143" y="0.857143" />
+                            <point x="0.5" y="1" />
+                            <point x="0.142857" y="0.857143" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="7" loop="0" name="DONE" pingpong="0" repeatcount="1" repeatto="0" sid="196960130822054" speed="30">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Ozz\Documents\GitHub\Boss--\Ozz\asset\MASH_DONE.png">
+                        <collision-poly>
+                            <point x="1" y="0.142857" />
+                            <point x="1" y="0" />
+                            <point x="1" y="0.142857" />
+                            <point x="1" y="0.5" />
+                            <point x="1" y="0.857143" />
+                            <point x="1" y="1" />
+                            <point x="1" y="0.857143" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Ozz\Documents\GitHub\Boss--\Ozz\asset\MASH_DONE.png">
+                        <collision-poly>
+                            <point x="0.143713" y="0.142857" />
+                            <point x="1" y="0.22619" />
+                            <point x="1" y="0.5" />
+                            <point x="1" y="0.125" />
+                            <point x="1" y="0.613095" />
+                            <point x="0.143713" y="0.857143" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Ozz\Documents\GitHub\Boss--\Ozz\asset\MASH_DONE.png">
+                        <collision-poly>
+                            <point x="0" y="0.142857" />
+                            <point x="1" y="0.22619" />
+                            <point x="1" y="0.5" />
+                            <point x="1" y="0.125" />
+                            <point x="1" y="0.613095" />
+                            <point x="0" y="0.857143" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Ozz\Documents\GitHub\Boss--\Ozz\asset\MASH_DONE.png">
+                        <collision-poly>
+                            <point x="0" y="0.142857" />
+                            <point x="1" y="0.22619" />
+                            <point x="1" y="0.5" />
+                            <point x="1" y="0.125" />
+                            <point x="1" y="0.613095" />
+                            <point x="0" y="0.857143" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Ozz\Documents\GitHub\Boss--\Ozz\asset\MASH_DONE.png">
+                        <collision-poly>
+                            <point x="0" y="0.142857" />
+                            <point x="0" y="0.22619" />
+                            <point x="1" y="0.5" />
+                            <point x="1" y="0.125" />
+                            <point x="0" y="0.613095" />
+                            <point x="0" y="0.857143" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Ozz\Documents\GitHub\Boss--\Ozz\asset\MASH_DONE.png">
+                        <collision-poly>
+                            <point x="0" y="0.142857" />
+                            <point x="0" y="0.22619" />
+                            <point x="1" y="0.5" />
+                            <point x="1" y="0.125" />
+                            <point x="0" y="0.613095" />
+                            <point x="0" y="0.857143" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Ozz\Documents\GitHub\Boss--\Ozz\asset\MASH_DONE.png">
+                        <collision-poly>
+                            <point x="0" y="0.142857" />
+                            <point x="0" y="0.22619" />
+                            <point x="1" y="0.5" />
+                            <point x="1" y="0.125" />
+                            <point x="0" y="0.613095" />
+                            <point x="0" y="0.857143" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type global="1" name="Array" sid="492665813865847">
+            <plugin id="Arr" />
+        </object-type>
+        <object-type name="salary" sid="980832859848908">
+            <plugin id="TiledBg" />
+            <instance-variables>
+                <instance-variable name="salary" sid="348859907173547" type="number" />
+            </instance-variables>
+            <texture original-source="C:\Users\Arnaud\Documents\progressBarV3.png" />
+        </object-type>
+        <object-type name="SpriteFont" sid="480560498131417">
+            <plugin id="Spritefont2" />
+            <instance-variables>
+                <instance-variable name="dico_ascii" sid="999960793633003" type="string" />
+            </instance-variables>
+            <texture />
+        </object-type>
+        <object-type name="player_card" sid="925752341260126">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="grade" sid="765525454804398" type="number" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="4" loop="0" name="GRADE" pingpong="0" repeatcount="1" repeatto="0" sid="175592736377111" speed="5">
+                    <frame duration="1" hotspotX="0.502262" hotspotY="0.504505" original-source="C:\Users\Ozz\Documents\GitHub\Boss--\Ozz\asset\badge_1.png" />
+                    <frame duration="1" hotspotX="0.502262" hotspotY="0.504505" original-source="C:\Users\Ozz\Documents\GitHub\Boss--\Ozz\asset\badge_2.png" />
+                    <frame duration="1" hotspotX="0.502262" hotspotY="0.504505" original-source="C:\Users\Ozz\Documents\GitHub\Boss--\Ozz\asset\badge_3.png" />
+                    <frame duration="1" hotspotX="0.502262" hotspotY="0.504505" original-source="C:\Users\Ozz\Documents\GitHub\Boss--\Ozz\asset\badge_4.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Audio" sid="317095204814100">
+            <plugin id="Audio" />
+        </object-type>
+        <object-type name="the_boss" sid="140364326593557">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="sprite" sid="207166999073520" type="number" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="2" loop="0" name="speak" pingpong="0" repeatcount="1" repeatto="0" sid="612287244055223" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Arnaud\Documents\GitHub\Boss--\Ozz\asset\Bose bouche fermé.png">
+                        <collision-poly>
+                            <point x="0.318182" y="0.318182" />
+                            <point x="0.5" y="0.172727" />
+                            <point x="0.681818" y="0.318182" />
+                            <point x="0.681818" y="0.5" />
+                            <point x="0.909091" y="0.909091" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0909091" y="0.909091" />
+                            <point x="0.318182" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Arnaud\Documents\GitHub\Boss--\Ozz\asset\Boss bouche ouverte.png">
+                        <collision-poly>
+                            <point x="0.318182" y="0.318182" />
+                            <point x="0.5" y="0.154545" />
+                            <point x="0.681818" y="0.318182" />
+                            <point x="0.681818" y="0.5" />
+                            <point x="0.909091" y="0.909091" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0909091" y="0.909091" />
+                            <point x="0.318182" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="fiche_de_paye" sid="428834170530720">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\Arnaud\Documents\GitHub\Boss--\arnaud\sprite\fiche_de_paye.png" />
+        </object-type>
+        <object-type name="Sprite" sid="534911905761245">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="421499474929621" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="wigglehold" sid="137824336601663">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="fram" sid="404351760169820" type="number" />
+                <instance-variable name="fram2_mod_2" sid="351117503232935" type="number" />
+                <instance-variable name="nb_pressed" sid="405278697501566" type="number" />
+                <instance-variable name="key_code1" sid="817119347995343" type="number" />
+                <instance-variable name="key_code2" sid="306948815527067" type="number" />
+                <instance-variable name="dico_ascii" sid="949827277938830" type="string" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="12" loop="0" name="increase" pingpong="0" repeatcount="1" repeatto="0" sid="986572475655770" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Arnaud\Documents\Boss-- backup\arnaud\sprite\wiggle_anim_spriteV2.png">
+                        <collision-poly>
+                            <point x="0.145455" y="0.145455" />
+                            <point x="0.5" y="0" />
+                            <point x="0.854545" y="0.145455" />
+                            <point x="1" y="0.5" />
+                            <point x="0.854545" y="0.854545" />
+                            <point x="0.5" y="1" />
+                            <point x="0.145455" y="0.854545" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.145455" y="0.145455" />
+                            <point x="0.5" y="0" />
+                            <point x="0.854545" y="0.145455" />
+                            <point x="1" y="0.5" />
+                            <point x="0.854545" y="0.854545" />
+                            <point x="0.5" y="1" />
+                            <point x="0.145455" y="0.854545" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.145455" y="0.145455" />
+                            <point x="0.5" y="0" />
+                            <point x="0.854545" y="0.145455" />
+                            <point x="1" y="0.5" />
+                            <point x="0.854545" y="0.854545" />
+                            <point x="0.5" y="1" />
+                            <point x="0.145455" y="0.854545" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.145455" y="0.145455" />
+                            <point x="0.5" y="0" />
+                            <point x="0.854545" y="0.145455" />
+                            <point x="1" y="0.5" />
+                            <point x="0.854545" y="0.854545" />
+                            <point x="0.5" y="1" />
+                            <point x="0.145455" y="0.854545" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.145455" y="0.145455" />
+                            <point x="0.5" y="0" />
+                            <point x="0.854545" y="0.145455" />
+                            <point x="1" y="0.5" />
+                            <point x="0.854545" y="0.854545" />
+                            <point x="0.5" y="1" />
+                            <point x="0.145455" y="0.854545" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.145455" y="0.145455" />
+                            <point x="0.5" y="0" />
+                            <point x="0.854545" y="0.145455" />
+                            <point x="1" y="0.5" />
+                            <point x="0.854545" y="0.854545" />
+                            <point x="0.5" y="1" />
+                            <point x="0.145455" y="0.854545" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.145455" y="0.145455" />
+                            <point x="0.5" y="0" />
+                            <point x="0.854545" y="0.145455" />
+                            <point x="1" y="0.5" />
+                            <point x="0.854545" y="0.854545" />
+                            <point x="0.5" y="1" />
+                            <point x="0.145455" y="0.854545" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.145455" y="0.145455" />
+                            <point x="0.5" y="0" />
+                            <point x="0.854545" y="0.145455" />
+                            <point x="1" y="0.5" />
+                            <point x="0.854545" y="0.854545" />
+                            <point x="0.5" y="1" />
+                            <point x="0.145455" y="0.854545" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.145455" y="0.145455" />
+                            <point x="0.5" y="0" />
+                            <point x="0.854545" y="0.145455" />
+                            <point x="1" y="0.5" />
+                            <point x="0.854545" y="0.854545" />
+                            <point x="0.5" y="1" />
+                            <point x="0.145455" y="0.854545" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.145455" y="0.145455" />
+                            <point x="0.5" y="0" />
+                            <point x="0.854545" y="0.145455" />
+                            <point x="1" y="0.5" />
+                            <point x="0.854545" y="0.854545" />
+                            <point x="0.5" y="1" />
+                            <point x="0.145455" y="0.854545" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.145455" y="0.145455" />
+                            <point x="0.5" y="0" />
+                            <point x="0.854545" y="0.145455" />
+                            <point x="1" y="0.5" />
+                            <point x="0.854545" y="0.854545" />
+                            <point x="0.5" y="1" />
+                            <point x="0.145455" y="0.854545" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.145455" y="0.145455" />
+                            <point x="0.5" y="0" />
+                            <point x="0.854545" y="0.145455" />
+                            <point x="1" y="0.5" />
+                            <point x="0.854545" y="0.854545" />
+                            <point x="0.5" y="1" />
+                            <point x="0.145455" y="0.854545" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="5" loop="0" name="destroy" pingpong="0" repeatcount="1" repeatto="0" sid="755483617549404" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Arnaud\Documents\Boss-- backup\arnaud\sprite\wiggle_anim_spriteV2.png">
+                        <collision-poly>
+                            <point x="0.145455" y="0.145455" />
+                            <point x="0.5" y="0" />
+                            <point x="0.854545" y="0.145455" />
+                            <point x="1" y="0.5" />
+                            <point x="0.854545" y="0.854545" />
+                            <point x="0.5" y="1" />
+                            <point x="0.145455" y="0.854545" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Arnaud\Documents\Boss-- backup\arnaud\sprite\wiggledestroy1.png">
+                        <collision-poly>
+                            <point x="0.145455" y="0.145455" />
+                            <point x="0.5" y="0" />
+                            <point x="0.854545" y="0.145455" />
+                            <point x="1" y="0.5" />
+                            <point x="0.854545" y="0.854545" />
+                            <point x="0.5" y="1" />
+                            <point x="0.145455" y="0.854545" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Arnaud\Documents\Boss-- backup\arnaud\sprite\wiggledestroy2.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Arnaud\Documents\Boss-- backup\arnaud\sprite\wiggledestroy3.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Arnaud\Documents\Boss-- backup\arnaud\sprite\wiggledestroy4.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+    </object-folder>
+    <families />
+    <layout-folder>
+        <layout>Boss.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-sheet>Hold.xml</event-sheet>
+        <event-sheet>Mash.xml</event-sheet>
+        <event-sheet>Wiggle.xml</event-sheet>
+        <event-sheet>cam.xml</event-sheet>
+        <event-sheet>tempo.xml</event-sheet>
+        <event-sheet>main.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="Keyboard" uid="2" />
+        <global-instance type="Audio" uid="3">
+            <properties>
+                <timescale-audio>Off</timescale-audio>
+                <saveload>All</saveload>
+                <play-in-background>No</play-in-background>
+                <positioned-audio></positioned-audio>
+                <panning-model>HRTF</panning-model>
+                <distance-model>Inverse</distance-model>
+                <listener-z-height>600</listener-z-height>
+                <reference-distance>600</reference-distance>
+                <maximum-distance>10000</maximum-distance>
+                <roll-off-factor>1</roll-off-factor>
+            </properties>
+        </global-instance>
+    </global-instances>
+    <sounds-folder>
+        <file name="Final-Fantasy-XI-Level-Up-Sound-High-Quality.ogg" />
+        <file name="Super-Mario-Bros-Coin-Sound-Effect.ogg" />
+    </sounds-folder>
+    <music-folder />
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+    </files-folder>
+</c2project>
